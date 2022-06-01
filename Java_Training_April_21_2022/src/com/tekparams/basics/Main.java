@@ -1,9 +1,16 @@
 package com.tekparams.basics;
 import com.tekparams.accessmodifiersdemo.Sales_Invoice;
-import com.tekparams.accessmodifiersdemo.purchaseorderdemo;
+
 import java.time.LocalDate;
 
- class Address {
+import com.tekparams.oops_concepts_1.Address1;
+import com.tekparams.oops_concepts_1.Emp;
+import com.tekparams.opps_concepts.Adder;
+import com.tekparams.opps_concepts.Bike;
+import com.tekparams.opps_concepts.Circle;
+import com.tekparams.opps_concepts.Vehicle;
+
+class Address {
     // Instance Variables (or) Data Members (or) Fields
     /* String DoorNo="";
     String Street1="";
@@ -96,10 +103,9 @@ import java.time.LocalDate;
      }
 
 
-
  }
 
-public class Main {
+public class Main  {
     private String EmpID="";
     private String EmpName="";
     private LocalDate DOB = LocalDate.of(2000,8,10);
@@ -199,7 +205,7 @@ public class Main {
         */
 
         /*
-        // Example for Public Access Modifier
+        // Example for Default Access Modifier
         System.out.println("\n"+"Example for Public Access Modifier..."+"\n");
         Payroll payroll = new Payroll();
         payroll.PayDate=LocalDate.of(2022,05,17);
@@ -216,9 +222,78 @@ public class Main {
         raiseSalesInvoice.displaySalesInvoice();
         */
 
+        /*
         // Example for public access modifier from different package
         System.out.println("\n"+"Example for public access modifier from different package"+"\n");
         purchaseorderdemo purchaseorderdemo = new purchaseorderdemo();
         purchaseorderdemo.displayPurchaseOrder();
+        */
+
+        /*
+        // Types of Inheritance
+        // Example for Single Inheritance
+        System.out.println("Types Inheritance - Single Inheritance Example..");
+        Programmer programmer = new Programmer();
+        System.out.println("Salary : "+programmer.salary);
+        System.out.println("Bonus : "+programmer.bonus);
+        */
+        /*
+        // Example for Multi level Inheritance
+        System.out.println("Example for Multi level Inheritance");
+        Programmer p = new Programmer();
+        System.out.println(p.salary);
+        */
+
+        /*
+        //Example1 for Hirarichal Inheritance
+        System.out.println("\nExample for Hararichal Inheritance...");
+        Receivables receivables = new Receivables();
+        receivables.DisplayReceivables();
+
+        //Example2 for Hirarichal Inheritance
+        System.out.println("\n\nExample for Hararichal Inheritance...");
+        Payables payables = new Payables();
+        payables.DisplayPayables();
+        */
+
+        /*
+        // Example for Aggregation
+        Circle circle = new Circle();
+        Double areaOfCircle=circle.findAreaOfCircle(5);
+        System.out.println("\nExample for Aggregation");
+        System.out.println("Area of the circle : "+areaOfCircle);
+        */
+        /*
+        // Another example for Aggregation
+        System.out.println("Another example for Aggregation ");
+        Address1 address1 =new Address1("Bangalore","Karnataka","India");
+        Emp emp = new Emp(100,"Suresh",address1);
+        emp.displayEmp();
+        */
+
+        /*
+        // Example1 for Method Overloading by chaning no. of arguments
+        System.out.println("Example1 for Method Overloading...");
+        int result = Adder.add(20,30);
+        System.out.println("\nThe sum for two nos. : "+result);
+
+        int result1 = Adder.add(40,30,10);
+        System.out.println("\nThe sum of three nos. : "+result1);
+
+        // Example2 for Method Overloading by changing the data type of the parameters
+        System.out.println("\nExample2 for Method Overloading...");
+        Double result2 = Adder.add(30.50,20.50);
+        System.out.println("The sum of two Decimal nos. : "+result);
+        */
+
+        // Example for Method Overriding - Accessing modified functionality
+        System.out.println("Example for Method Overriding - Accessing modified functionality..");
+        Bike bike = new Bike();
+        bike.run();
+
+        // Example for Method Overriding - Accessing existing functionality
+        System.out.println("Example for Method Overriding - Accessing existing functionality");
+        Vehicle vehicle = new Vehicle();
+        vehicle.run();
     }
 }

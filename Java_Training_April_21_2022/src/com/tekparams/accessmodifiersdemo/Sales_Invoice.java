@@ -12,4 +12,12 @@ public class Sales_Invoice {
         System.out.println("Invoice No : "+invoiceNo+"\n"+"Invoice Date :"+invoiceDate+"\n"+"Product Code :"+productCode+"\n"+"Product Description :"+productDescription+"\n"+"Invoice Amount:"+invoiceAmount);
     }
 
+//    public Sales_Invoice(){
+//        this.invoiceNo="INV000";
+//        this.invoiceDate=LocalDate.of(2022,05,20);
+//        this.productCode="PR00";
+//        this.productDescription="Laptop";
+//        this.invoiceAmount=0.0;
+//    }
+
 }

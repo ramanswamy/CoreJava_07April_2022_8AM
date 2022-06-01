@@ -3,9 +3,9 @@ package com.tekparams.basics;
 import java.time.LocalDate;
 
 public class Payroll {
-    public String PayID;
-    public LocalDate PayDate = LocalDate.of(2022,04,01);
-    public int PayAmount;
+    String PayID;
+    LocalDate PayDate = LocalDate.of(2022,04,01);
+    int PayAmount;
 
     public void DisplayParoll(){
         System.out.println("Payroll ID : "+PayID);
