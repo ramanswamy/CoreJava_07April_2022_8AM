@@ -5,10 +5,7 @@ import java.time.LocalDate;
 
 import com.tekparams.oops_concepts_1.Address1;
 import com.tekparams.oops_concepts_1.Emp;
-import com.tekparams.opps_concepts.Adder;
-import com.tekparams.opps_concepts.Bike;
-import com.tekparams.opps_concepts.Circle;
-import com.tekparams.opps_concepts.Vehicle;
+import com.tekparams.opps_concepts.*;
 
 class Address {
     // Instance Variables (or) Data Members (or) Fields
@@ -106,6 +103,7 @@ class Address {
  }
 
 public class Main  {
+
     private String EmpID="";
     private String EmpName="";
     private LocalDate DOB = LocalDate.of(2000,8,10);
@@ -286,6 +284,7 @@ public class Main  {
         System.out.println("The sum of two Decimal nos. : "+result);
         */
 
+        /*
         // Example for Method Overriding - Accessing modified functionality
         System.out.println("Example for Method Overriding - Accessing modified functionality..");
         Bike bike = new Bike();
@@ -295,5 +294,81 @@ public class Main  {
         System.out.println("Example for Method Overriding - Accessing existing functionality");
         Vehicle vehicle = new Vehicle();
         vehicle.run();
+        */
+
+        /*
+        // Example1 for super Keyword
+        Dog dog = new Dog();
+        System.out.println("Example1 for super keyword...");
+        dog.printColor();
+        */
+        /*
+        // Example2 for super keyword
+        System.out.println("Example2 fpr super keyword");
+        Dog1 dog1 = new Dog1();
+        dog1.work();
+        */
+
+        /*
+        // Example3 for accessing parent class constructor
+        System.out.println("Example3 for parent class constructor");
+        Dog2 dog2 = new Dog2();
+         */
+
+        /*
+        //Example for Instance Inializer Block
+        System.out.println("Example for Instance Initializer Block....");
+        Bike7 b7 = new Bike7();
+         */
+
+        /*
+        // Example for final variable
+        System.out.println("Example for final variable");
+        Bike9 bike9 = new Bike9();
+        System.out.println(bike9.speedlimit);
+//        bike9.run();
+//        System.out.println(bike9.speedlimit);
+         */
+
+        /*
+        // Example for final method
+        System.out.println("Example for final method...");
+        Honda honda = new Honda();
+        honda.run();
+        Bike10 bike10 = new Bike10();
+        bike10.run();
+         */
+
+        /*
+        //Example for final class
+        System.out.println("Example for finnal class");
+        Yamaha yamaha = new Yamaha();
+        yamaha.printYamaha();
+        */
+
+        /*
+        //Example for Runtime Polimorphism (Method overriding)
+        System.out.println("Example for Runtime Polymorphism - Method overriding..");
+        Splender splender = new Splender();
+        splender.run();
+         */
+
+        /*
+        //Example for Runtime Polimorphism (Method overriding)
+        System.out.println("Example for Runtime Polymorphism - Method overriding..");
+        Bike12 splender1 = new Splender();
+        splender1.run();
+        */
+
+        //Example for Static Binding
+        System.out.println("Example for static binding...");
+        Dog3 dog3 = new Dog3();
+        dog3.eat();
+
+        //Example for Dynamic Binding
+        System.out.println("Example for Dynamic Binding...");
+        Bank bk=new Bank();
+        bk = new SBI();
+        bk.getRateOfInterest();
     }
 }
