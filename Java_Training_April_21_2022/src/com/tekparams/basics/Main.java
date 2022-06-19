@@ -2,7 +2,10 @@ package com.tekparams.basics;
 import com.tekparams.accessmodifiersdemo.Sales_Invoice;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Iterator;
 
+import com.tekparams.collectionexamples.ArrayListExample;
 import com.tekparams.oops_concepts_1.Address1;
 import com.tekparams.oops_concepts_1.Emp;
 import com.tekparams.opps_concepts.*;
@@ -360,6 +363,7 @@ public class Main  {
         splender1.run();
         */
 
+        /*
         //Example for Static Binding
         System.out.println("Example for static binding...");
         Dog3 dog3 = new Dog3();
@@ -370,5 +374,36 @@ public class Main  {
         Bank bk=new Bank();
         bk = new SBI();
         bk.getRateOfInterest();
+         */
+
+        /*
+        // Example for Abstract Class
+        System.out.println("Example for Abstract Class...");
+        Honda4 h4 = new Honda4();
+        h4.run();
+        */
+
+        /*
+        // Example for Interface
+        System.out.println("Example for Interface...");
+        A6 a6 = new A6();
+        a6.print();
+        a6.print1();
+         */
+
+        // Example for Collection Framework - List interface >> ArrayList class
+        System.out.println("Example for Collection Framework - List interface >> ArrayList class");
+        ArrayList<String> arrayList = new ArrayList<String>();
+        arrayList.add("Ravi");
+        arrayList.add("Vijay");
+        arrayList.add("Ravi");
+        arrayList.add("Ajay");
+
+
+        Iterator itr = arrayList.iterator();
+        while(itr.hasNext()){
+            System.out.println(itr.next());
+        }
+
     }
 }
