@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Raman_Dell/Java Training/CoreJava_07April2022_8AM/GitHubRepository/CoreJava_07April_2022_8AM/Java_Training_April_21_2022/test-output">
+        <classes>
+            <class name="com.tekparams.seleniumtraining.acttiondrivers.ActionDriver"></class>
+        </classes>
+    </test>
+</suite>

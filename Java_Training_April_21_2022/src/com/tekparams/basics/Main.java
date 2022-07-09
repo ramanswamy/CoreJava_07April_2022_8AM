@@ -4,11 +4,15 @@ import com.tekparams.accessmodifiersdemo.Sales_Invoice;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 
 import com.tekparams.collectionexamples.ArrayListExample;
+import com.tekparams.collectionexamples.LinkedListExample;
 import com.tekparams.oops_concepts_1.Address1;
 import com.tekparams.oops_concepts_1.Emp;
 import com.tekparams.opps_concepts.*;
+import com.tekparams.seleniumtraining.Google;
+
 
 class Address {
     // Instance Variables (or) Data Members (or) Fields
@@ -391,6 +395,7 @@ public class Main  {
         a6.print1();
          */
 
+        /*
         // Example for Collection Framework - List interface >> ArrayList class
         System.out.println("Example for Collection Framework - List interface >> ArrayList class");
         ArrayList<String> arrayList = new ArrayList<String>();
@@ -404,6 +409,28 @@ public class Main  {
         while(itr.hasNext()){
             System.out.println(itr.next());
         }
+         */
+
+        /*
+        // Example for Collection Framework - Linked List - List interface
+        System.out.println("Example for Collection Framework - Linked List - List interface");
+        LinkedList<String> linkedList = new LinkedList<String>();
+        linkedList.add("Ravi");
+        linkedList.add("Vijay");
+        linkedList.add("Ravi");
+        linkedList.add("Ajay");
+
+        Iterator itr = linkedList.iterator();
+        while (itr.hasNext()){
+            System.out.println(itr.next());
+        }
+         */
+
+        // Selenium Examples
+        System.out.println("Selenium Examples");
+        // Open google
+        Google google = new Google();
+        google.setUp();
 
     }
 }
