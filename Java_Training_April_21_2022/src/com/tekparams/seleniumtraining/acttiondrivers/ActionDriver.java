@@ -54,6 +54,18 @@ public class ActionDriver {
         Assert.assertEquals(strResult,"Corporate Training");
     }
 
+    @Test(priority=4, groups={"SmokeTest"})
+    public void loginToApplication(){
+        element=homePage.LoginObject(driver);
+        element.click();
+        element=homePage.Username(driver);
+        element.sendKeys("ram");
+        element=homePage.Password(driver);
+        element.sendKeys("rama123");
+        element=homePage.LoginBtn(driver);
+        element.click();
+    }
+
     @AfterTest
     public void cleanUp(){
         System.out.println("Clean up executed...");

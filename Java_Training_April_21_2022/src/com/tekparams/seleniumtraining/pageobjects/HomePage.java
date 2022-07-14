@@ -16,6 +16,9 @@ public class HomePage extends Base{
     WebElement CorporateTraining=null;
     WebElement ContactUs=null;
     WebElement Login = null;
+    WebElement Username = null;
+    WebElement Password = null;
+    WebElement LoginBtn = null;
 
     WebElement element=null;
 //    WebDriver HomePageDriver = null;
@@ -45,6 +48,18 @@ public class HomePage extends Base{
 
     public WebElement LoginObject(WebDriver HomePageDriver){
         element=HomePageDriver.findElement(By.xpath("//a[normalize-space()='Login']"));
+        return element;
+    }
+    public WebElement Username(WebDriver HomePageDriver){
+        element = HomePageDriver.findElement(By.id("user_login_name"));
+        return element;
+    }
+    public WebElement Password(WebDriver HomPageDriver){
+        element=HomPageDriver.findElement(By.id("user_login_password"));
+        return element;
+    }
+    public WebElement LoginBtn(WebDriver HomePageDriver){
+        element=HomePageDriver.findElement(By.);
         return element;
     }
 }
