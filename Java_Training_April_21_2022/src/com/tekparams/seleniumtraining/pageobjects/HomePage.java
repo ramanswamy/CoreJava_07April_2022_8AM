@@ -59,7 +59,16 @@ public class HomePage extends Base{
         return element;
     }
     public WebElement LoginBtn(WebDriver HomePageDriver){
-        element=HomePageDriver.findElement(By.);
+        //element=HomePageDriver.findElement(By.xpath("//a[contains(text(),\"Login\")]"));
+        element=HomePageDriver.findElement(By.xpath("//button/span[contains(text(),\"Login\")]"));
+        return element;
+    }
+    public WebElement CheckForInvalidLogin(WebDriver HomePageDriver){
+        element=HomePageDriver.findElement(By.xpath("//div[@class='mkdf-social-login-holder']//p[contains(text(),'Wrong username or password.')]"));
+        return element;
+    }
+    public WebElement MainPage(WebDriver HomePageDriver){
+        element=HomePageDriver.findElement(By.xpath("//rs-slide[1]"));
         return element;
     }
 }
