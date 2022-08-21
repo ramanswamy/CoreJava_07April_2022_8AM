@@ -15,6 +15,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import org.testng.asserts.Assertion.*;
+import java.lang.Class;
+
+
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -83,16 +86,17 @@ public class ActionDriver {
         List<String[]> data = getStrings();
         for(String[] row:data){
             System.out.println(Arrays.toString(row));
+            data.
         }
     }
 
-    private List<String[]> getStrings() throws IOException, CsvException {
+    public List<String[]> getStrings() throws IOException, CsvException {
         CSVReader reader = new CSVReader(new FileReader("./TestData/LoginTestData.csv"));
         List<String[]> data =reader.readAll();
         return data;
     }
 
-    @DataProvider(name="loginDataProvider1")
+    @DataProvider(name="loginDataProviderUsingCSV")
     public  Object[][] signInTekparamsUsingCSV(){
         return new Object[][] {
                 {"ram","rama123",false},
@@ -102,9 +106,9 @@ public class ActionDriver {
         };
     }
 
-//    @Test(priority=4, groups={"SmokeTest"},dataProvider = "loginDataProvider" )
-    @Test(priority=4, groups={"SmokeTest"},dataProvider = "loginDataProvider1" )
-    public void loginToApplication(String username, String password,Boolean flag){
+    @Test(priority=4, groups={"SmokeTest"},dataProvider = "loginDataProviderUsingCSV" )
+    public void loginToApplicationUsingCSV(String username, String password,String flag1){
+        Boolean flag = Boolean.valueOf(flag1);
         if (flag==false){
             element=homePage.LoginObject(driver);
             element.click();
@@ -149,6 +153,50 @@ public class ActionDriver {
         }
     }
 
+    public void loginToApplication(String username, String password,Boolean flag){
+        if (flag==false){
+            element=homePage.LoginObject(driver);
+            element.click();
+            element=homePage.Username(driver);
+            element.clear();
+            element.sendKeys(username);
+            element=homePage.Password(driver);
+            element.clear();
+            element.sendKeys(password);
+            element=homePage.LoginBtn(driver);
+            element.click();
+            element=homePage.CheckForInvalidLogin(driver);
+            if (element.getText().contains("Wrong")) {
+                System.out.println("Wrong user name/password");
+                Assert.assertTrue(true,"Wrong username or password validated successfully.");
+                System.out.println("closed applicaiton....");
+                driver.quit();
+                openApplication();
+//                element=homePage.LoginBtn(driver);
+//                Actions actions = new Actions(driver);
+//                actions.keyDown(element,Keys.ESCAPE);
+//                actions.keyUp(element,Keys.ESCAPE);
+//                actions.build().perform();
+            }
+        }
+        if (flag==true){
+            element=homePage.LoginObject(driver);
+            element.click();
+            element=homePage.Username(driver);
+            element.clear();
+            element.sendKeys(username);
+            element=homePage.Password(driver);
+            element.clear();
+            element.sendKeys(password);
+            element=homePage.LoginBtn(driver);
+            element.click();
+            element=userDashboard.UserDashboardObj(driver);
+            if (element.isDisplayed()==true)
+            {
+                Assert.assertTrue(true,"Login successful valiated.");
+            }
+        }
+    }
     @AfterTest
     public void cleanUp(){
         System.out.println("Clean up executed...");
